@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation(project(":opm-auth"))
+
+    // https://mvnrepository.com/artifact/io.javalin/javalin
+    implementation 'io.javalin:javalin:4.6.1'
+    // https://mvnrepository.com/artifact/io.javalin/javalin-bundle
+    implementation 'io.javalin:javalin-bundle:4.6.1'
+
+    implementation("com.google.code.gson:gson:2.8.2")
+
+}
+
+test {
+    useJUnitPlatform()
+}
